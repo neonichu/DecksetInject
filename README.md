@@ -3,7 +3,7 @@
 This is a dynamic library you can inject into [Deckset][1] to change the colors
 of some theme.
 
-Thanks to @kylef for some help creating it!
+Thanks to [@kylef][2] for some help creating it!
 
 ## Author
 
@@ -16,3 +16,4 @@ Follow me on Twitter: [@NeoNacho](https://twitter.com/NeoNacho)
 This project is available under the MIT license. See the LICENSE file for more info.
 
 [1]: http://www.decksetapp.com
+[2]: https://github.com/kylef
