@@ -1,0 +1,6 @@
+[submodule "vendor/CPDColors"]
+	path = vendor/CPDColors
+	url = https://github.com/neonichu/CPDColors.git
+[submodule "vendor/Aspects"]
+	path = vendor/Aspects
+	url = https://github.com/steipete/Aspects.git
