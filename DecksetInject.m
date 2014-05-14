@@ -39,6 +39,16 @@
     [self makeSelector:@selector(darkTextColor)
            returnColor:[NSColor kyleBrown]
      inThemeClassNamed:"PosterColorScheme7"];
+
+    [objc_getClass("TextStyle") aspect_hookSelector:@selector(family)
+                                        withOptions:AspectPositionInstead
+                                         usingBlock:^(id<AspectInfo> info) {
+                                             NSInvocation *invocation = info.originalInvocation;
+                                             [invocation invoke];
+
+                                             NSString* family = @"GT Walsheim";
+                                             [invocation setReturnValue:&family];
+                                         } error:NULL];
 }
 
 @end
