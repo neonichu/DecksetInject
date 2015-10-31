@@ -1,5 +1,6 @@
 #import <Foundation/Foundation.h>
 #import <AppKit/AppKit.h>
+#import <objc/runtime.h>
 
 #import "Aspects.h"
 #import "CPDColors.h"
@@ -27,28 +28,10 @@
 
 + (void)load {
     NSLog(@"Loaded DecksetInject");
-    
+
     [self makeSelector:@selector(backgroundColor)
-           returnColor:[NSColor ortaOrange]
-     inThemeClassNamed:"PosterColorScheme7"];
-    
-    [self makeSelector:@selector(lightTextColor)
-           returnColor:[NSColor alloyBlue]
-     inThemeClassNamed:"PosterColorScheme7"];
-    
-    [self makeSelector:@selector(darkTextColor)
-           returnColor:[NSColor kyleBrown]
-     inThemeClassNamed:"PosterColorScheme7"];
-
-    [objc_getClass("TextStyle") aspect_hookSelector:@selector(family)
-                                        withOptions:AspectPositionInstead
-                                         usingBlock:^(id<AspectInfo> info) {
-                                             NSInvocation *invocation = info.originalInvocation;
-                                             [invocation invoke];
-
-                                             NSString* family = @"GT Walsheim";
-                                             [invocation setReturnValue:&family];
-                                         } error:NULL];
+           returnColor:[NSColor colorWithRed:0.631 green:0.341 blue:0.91 alpha:1]
+     inThemeClassNamed:"Stylesheet"];
 }
 
 @end

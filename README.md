@@ -5,6 +5,11 @@ of some theme.
 
 Thanks to [@kylef][2] for some help creating it!
 
+## Usage
+
+Just run `make` and Deckset will be launched with the injected dylib.
+The current example changes the slide background color to purple.
+
 ## Author
 
 Boris Bügling, boris@icculus.org
